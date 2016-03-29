@@ -78,5 +78,15 @@ CREATE TABLE Notas(
 				FOREIGN KEY (Codigo)
 							REFERENCES Curso	
 );
+
+CREATE TABLE Usuario(
+	DNI_U 			CHAR(8) 		NOT NULL,
+	Nombre			VARCHAR(30)		NOT NULL,
+	ApePaterno		VARCHAR(20)		NOT NULL,
+	Cuenta			VARCHAR(10)		NOT NULL,
+	Clave			VARCHAR(10)		NOT NULL,
+	CONSTRAINT PKUsuarios
+				PRIMARY KEY (DNI_U)
+);
 /
 
