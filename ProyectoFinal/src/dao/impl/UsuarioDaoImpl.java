@@ -84,8 +84,13 @@ public class UsuarioDaoImpl implements UsuarioDaoEspec{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private Usuario mapRow(ResultSet rs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private Usuario mapRow(ResultSet rs) throws SQLException {
+        Usuario bean = new Usuario();
+        bean.setDni_u(rs.getString("dni_u"));
+        bean.setNombre(rs.getString("nombre"));
+        bean.setApePaterno(rs.getString("apePaterno"));
+        bean.setCuenta(rs.getString("cuenta"));
+        return bean;
     }
     
 }

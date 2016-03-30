@@ -5,6 +5,9 @@
  */
 package view;
 
+import controller.LoginController;
+import util.Dialogo;
+
 /**
  *
  * @author RAFAEL
@@ -17,6 +20,7 @@ public class Login extends javax.swing.JDialog {
     public Login(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -52,6 +56,11 @@ public class Login extends javax.swing.JDialog {
 
         btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/Vista Users.png"))); // NOI18N
         btnIngresar.setText("   INGRESAR ");
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarActionPerformed(evt);
+            }
+        });
 
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/exit.png"))); // NOI18N
         btnSalir.setText("   SALIR");
@@ -116,6 +125,24 @@ public class Login extends javax.swing.JDialog {
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
       System.exit(0);
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+        try{
+        //datos
+            String cuenta = txtUsuario.getText();
+            String clave = String.valueOf(txtClave.getPassword());
+        //VAlidar
+            LoginController control = new LoginController();
+            control.validar(cuenta, clave);
+            
+            //Continuar connn el proceso
+            
+            this.dispose();
+            VentanaPrincipal.main(null);
+        }catch(Exception e){
+        Dialogo.error(rootPane, e.getMessage());
+        }
+    }//GEN-LAST:event_btnIngresarActionPerformed
 
     /**
      * @param args the command line arguments
