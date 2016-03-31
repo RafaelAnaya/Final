@@ -17,7 +17,7 @@ public class LoginController {
     public void validar(String cuenta, String clave){
    LoginService service = new LoginService();
    Usuario bean = service.validar(cuenta, clave);
-   Memoria.put("cuenta", bean);
+   Memoria.put("Cuenta", bean);
    }
     
 }

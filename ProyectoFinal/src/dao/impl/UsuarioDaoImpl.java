@@ -26,10 +26,10 @@ public class UsuarioDaoImpl implements UsuarioDaoEspec{
         Connection cn = null;
         try{
         cn = ConexionDB.getConnection();
-        String sql = "select DNI_U,Nombre,ApePaterno,Cuenta"
-                    +"from Usuario"
-                    +"where Cuenta=?"
-                    +"and Clave=?";
+        String sql = "select DNI_U, Nombre, ApePaterno, Cuenta "
+                    + "from usuario "
+                    + "where Cuenta = ? "
+                    + "and Clave = ? ";
             PreparedStatement ptsm = cn.prepareStatement(sql);
             ptsm.setString(1, cuenta);
             ptsm.setString(2, clave);
@@ -86,10 +86,10 @@ public class UsuarioDaoImpl implements UsuarioDaoEspec{
 
     private Usuario mapRow(ResultSet rs) throws SQLException {
         Usuario bean = new Usuario();
-        bean.setDni_u(rs.getString("dni_u"));
-        bean.setNombre(rs.getString("nombre"));
-        bean.setApePaterno(rs.getString("apePaterno"));
-        bean.setCuenta(rs.getString("cuenta"));
+        bean.setDni_u(rs.getString("DNI_U"));
+        bean.setNombre(rs.getString("Nombre"));
+        bean.setApePaterno(rs.getString("ApePaterno"));
+        bean.setCuenta(rs.getString("Cuenta"));
         return bean;
     }
     
