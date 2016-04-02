@@ -10,5 +10,5 @@ package dao.espec;
  * @author RAFAEL
  */
 public interface CursosDaoEspec {
-    
+    void procesoIngCursos(String Codigo,String Nom_Curso,double Costo);
 }

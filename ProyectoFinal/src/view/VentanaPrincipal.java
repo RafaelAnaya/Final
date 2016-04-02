@@ -45,6 +45,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         menuProceso = new javax.swing.JMenu();
         menuProcesoIngNota = new javax.swing.JMenuItem();
         menuProcesoIngAlumno = new javax.swing.JMenuItem();
+        menuProcesoIngCurso = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,6 +79,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         menuProceso.add(menuProcesoIngAlumno);
 
+        menuProcesoIngCurso.setText("Ingresar nuevo Curso");
+        menuProcesoIngCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuProcesoIngCursoActionPerformed(evt);
+            }
+        });
+        menuProceso.add(menuProcesoIngCurso);
+
         menuBar.add(menuProceso);
 
         setJMenuBar(menuBar);
@@ -107,6 +116,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void menuProcesoIngAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuProcesoIngAlumnoActionPerformed
         CargarFormulario(IngresoAlumnos.class);
     }//GEN-LAST:event_menuProcesoIngAlumnoActionPerformed
+
+    private void menuProcesoIngCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuProcesoIngCursoActionPerformed
+        CargarFormulario(IngresoCursos.class);
+    }//GEN-LAST:event_menuProcesoIngCursoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,6 +163,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenu menuProceso;
     private javax.swing.JMenuItem menuProcesoIngAlumno;
+    private javax.swing.JMenuItem menuProcesoIngCurso;
     private javax.swing.JMenuItem menuProcesoIngNota;
     // End of variables declaration//GEN-END:variables
 
