@@ -10,5 +10,5 @@ package dao.espec;
  * @author RAFAEL
  */
 public interface ManagerDaoEspec {
-    void procesoIngNotas(double Parcial_1, double Parcial_2, double Cuaderno, double Prom_Tar, double Exam_Final, String DNI, String Codigo);
+    void procesoIngNotas(double Parcial_1, double Parcial_2, double Cuaderno, double Prom_Tar, double Ex_Final, String DNI, String Codigo);
 }

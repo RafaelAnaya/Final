@@ -18,20 +18,20 @@ import java.sql.SQLException;
 public class ManagerDaoImpl implements ManagerDaoEspec{
 
     @Override
-    public void procesoIngNotas(double Parcial_1, double Parcial_2, double Cuaderno, double Prom_Tar, double Exam_Final, String DNI, String Codigo) {
+    public void procesoIngNotas(double Parcial_1, double Parcial_2, double Cuaderno, double Prom_Tar, double Ex_Final, String DNI, String Codigo) {
         Connection cn = null;
         try{
         cn = ConexionDB.getConnection();
         cn.setAutoCommit(false);
         //Actualizar Notas
         String sql = "insert into Notas(Parcial_1,  Parcial_2, Cuaderno, "
-                + "Prom_Tar, Exam_Final, DNI, Codigo) values(?,?,?,?,?,?,?)";
+                + "Prom_Tar, Ex_Final, DNI, Codigo) values(?,?,?,?,?,?,?)";
                 PreparedStatement pstm = cn.prepareStatement(sql);
                 pstm.setDouble(1, Parcial_1);
                 pstm.setDouble(2, Parcial_2);
                 pstm.setDouble(3, Cuaderno);
                 pstm.setDouble(4, Prom_Tar);
-                pstm.setDouble(5, Exam_Final);
+                pstm.setDouble(5, Ex_Final);
                 pstm.setString(6, DNI);
                 pstm.setString(7, Codigo);
                 pstm.executeUpdate();

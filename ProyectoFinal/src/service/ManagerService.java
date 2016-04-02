@@ -18,7 +18,7 @@ public class ManagerService {
     managerDao = new ManagerDaoImpl();
     
     }
-    public void procesoIngNotas(double Parcial_1, double Parcial_2, double Cuaderno, double Prom_Tar, double Exam_Final, String DNI, String Codigo){
+    public void procesoIngNotas(double Parcial_1, double Parcial_2, double Cuaderno, double Prom_Tar, double Ex_Final, String DNI, String Codigo){
     if(DNI==null || DNI.isEmpty()){
     throw new RuntimeException(" DNI no es correcto");
     }
@@ -37,11 +37,11 @@ public class ManagerService {
     if(Prom_Tar<=0.0){
     throw new RuntimeException("Error, numero no valido");
     }
-    if(Exam_Final<=0.0){
+    if(Ex_Final<=0.0){
     throw new RuntimeException("Error, numero no valido");
     }
     
-    managerDao.procesoIngNotas(Parcial_1, Parcial_2, Cuaderno, Prom_Tar, Exam_Final, DNI, Codigo);
+    managerDao.procesoIngNotas(Parcial_1, Parcial_2, Cuaderno, Prom_Tar, Ex_Final, DNI, Codigo);
     }
     
 }

@@ -147,16 +147,17 @@ public class IngresoNotas extends javax.swing.JInternalFrame {
     private void btnIngresarNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarNotasActionPerformed
       try{
       //Datos
-        String DNI = txt_dni.getText();
-        String Codigo = txt_codigo.getText();
+        
         double Parcial_1  = Double.parseDouble(txt_Parcial1.getText());
         double Parcial_2  = Double.parseDouble(txtParcial2.getText());
         double Cuaderno = Double.parseDouble(txtNotaCuaderno.getText());
         double Prom_Tar = Double.parseDouble(txtNotaPromedio.getText());
-        double Exam_Final = Double.parseDouble(txtExamenFinal.getText());
+        double Ex_Final = Double.parseDouble(txtExamenFinal.getText());
+        String DNI = txt_dni.getText();
+        String Codigo = txt_codigo.getText();
         //Proceso 
           NotasController control = new NotasController();
-          control.procesoIngNota(Parcial_1, Parcial_2, Cuaderno, Prom_Tar, Exam_Final, DNI, Codigo);
+          control.procesoIngNota(Parcial_1, Parcial_2, Cuaderno, Prom_Tar, Ex_Final, DNI, Codigo);
           //Reporte
           Dialogo.info(rootPane, "Proceso ok. ");
           txt_Parcial1.setText("");

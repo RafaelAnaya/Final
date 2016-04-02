@@ -16,7 +16,7 @@ public class Notas {
     private double Parcial_2;
     private double Cuaderno;
     private double Prom_Tar;
-    private double Exam_Final;
+    private double Ex_Final;
     
     public Notas(){
     }
@@ -108,15 +108,15 @@ public class Notas {
     /**
      * @return the Exam_Final
      */
-    public double getExam_Final() {
-        return Exam_Final;
+    public double getEx_Final() {
+        return Ex_Final;
     }
 
     /**
      * @param Exam_Final the Exam_Final to set
      */
-    public void setExam_Final(double Exam_Final) {
-        this.Exam_Final = Exam_Final;
+    public void setEx_Final(double Ex_Final) {
+        this.Ex_Final = Ex_Final;
     }
    
     

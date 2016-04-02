@@ -5,7 +5,7 @@
  */
 package controller;
 
-import domain.Notas;
+import domain.Usuario;
 import service.ManagerService;
 import util.Memoria;
 
@@ -18,9 +18,8 @@ public class NotasController {
     public NotasController(){
     managerService = new ManagerService();
     }
-    public void  procesoIngNota(double Parcial_1, double Parcial_2, double Cuaderno, double Prom_Tar, double Exam_Final, String DNI, String Codigo){
-    Notas bean = (Notas) Memoria.get("DNI");
-    managerService.procesoIngNotas(Parcial_1, Parcial_2, Cuaderno, Prom_Tar, Exam_Final,Codigo , bean.getDNI());
-    }
+   public void  procesoIngNota(double Parcial_1, double Parcial_2, double Cuaderno, double Prom_Tar, double Ex_Final, String DNI, String Codigo){
+   managerService.procesoIngNotas(Parcial_1, Parcial_2, Cuaderno, Prom_Tar, Ex_Final, DNI, Codigo );
+   }
     
 }
