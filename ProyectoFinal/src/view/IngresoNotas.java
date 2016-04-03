@@ -61,7 +61,7 @@ public class IngresoNotas extends javax.swing.JInternalFrame {
 
         jLabel7.setText("CODIGO DEL CURSO");
 
-        btnIngresarNotas.setText("INGRESAR");
+        btnIngresarNotas.setText("INGRESAR NOTAS");
         btnIngresarNotas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIngresarNotasActionPerformed(evt);

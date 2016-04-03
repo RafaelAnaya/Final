@@ -10,5 +10,5 @@ package dao.espec;
  * @author RAFAEL
  */
 public interface ProfesorDaoEspec {
-    
+    void procesoIngProfesor(String DNI_P,String Nombre,String ApePaterno,String ApeMaterno,String Codigo);
 }

@@ -9,6 +9,6 @@ package dao.espec;
  *
  * @author RAFAEL
  */
-public interface IUsuarioDaoEspc {
+public interface IUsuarioDaoEspec {
     
 }

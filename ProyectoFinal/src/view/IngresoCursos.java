@@ -122,7 +122,7 @@ public class IngresoCursos extends javax.swing.JInternalFrame {
             //Proceso
             
             CursoController control = new CursoController();
-            control.procesoIngCurso(Codigo, Curso, Costo);
+            control.procesoIngCurso(Codigo, Curso, Costo*2);
             
             //Reporte
             
